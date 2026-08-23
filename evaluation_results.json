@@ -1,0 +1,171 @@
+{
+  "evaluation": "Grounded Answer",
+  "total_questions": 10,
+  "passed": 10,
+  "failed": 0,
+  "pass_rate": 100.0,
+  "results": [
+    {
+      "id": "Q1",
+      "question": "How long do I have to report a change in circumstances?",
+      "expected_clauses": [
+        "§4.3.2"
+      ],
+      "retrieved_clauses": [
+        "§4.3.2",
+        "§11.1.2",
+        "§9.1.4",
+        "§9.6.1",
+        "§10.5.1",
+        "§9.3.2",
+        "§4.1.1"
+      ],
+      "should_refuse": false,
+      "passed": true
+    },
+    {
+      "id": "Q2",
+      "question": "What is the maximum countable resource limit?",
+      "expected_clauses": [
+        "§2.4.1"
+      ],
+      "retrieved_clauses": [
+        "§2.4.1",
+        "§2.4.2",
+        "§2.4.3",
+        "§6.6.1",
+        "§6.5.2"
+      ],
+      "should_refuse": false,
+      "passed": true
+    },
+    {
+      "id": "Q3",
+      "question": "How long does the Department have to determine an application?",
+      "expected_clauses": [
+        "§8.3.1"
+      ],
+      "retrieved_clauses": [
+        "§8.3.1",
+        "§8.2.3",
+        "§8.1.3",
+        "§12.2.3",
+        "§8.3.3"
+      ],
+      "should_refuse": false,
+      "passed": true
+    },
+    {
+      "id": "Q4",
+      "question": "What income is disregarded for a dependent child?",
+      "expected_clauses": [
+        "§6.4.1"
+      ],
+      "retrieved_clauses": [
+        "§6.4.1",
+        "§1.4.5",
+        "§2.3.1",
+        "§5.5.1",
+        "§1.4.7"
+      ],
+      "should_refuse": false,
+      "passed": true
+    },
+    {
+      "id": "Q5",
+      "question": "How much is the sanction for a first sanction?",
+      "expected_clauses": [
+        "§10.5.2"
+      ],
+      "retrieved_clauses": [
+        "§10.5.2",
+        "§4.3.4",
+        "§9.3.3",
+        "§10.5.3",
+        "§10.5.1",
+        "§4.3.2",
+        "§4.3.2"
+      ],
+      "should_refuse": false,
+      "passed": true
+    },
+    {
+      "id": "Q6",
+      "question": "What is the reporting deadline for a change of circumstances and are there any other provisions about the reporting period?",
+      "expected_clauses": [
+        "§4.3.2",
+        "§9.1.4"
+      ],
+      "retrieved_clauses": [
+        "§4.3.2",
+        "§4.3.4",
+        "§9.1.4",
+        "§10.5.1",
+        "§12.3.3"
+      ],
+      "should_refuse": false,
+      "passed": true
+    },
+    {
+      "id": "Q7",
+      "question": "How long do I have to appeal after the review outcome?",
+      "expected_clauses": [
+        "§12.1.2"
+      ],
+      "retrieved_clauses": [
+        "§12.1.2",
+        "§12.1.3",
+        "§11.2.3",
+        "§11.1.2",
+        "§2.2.2"
+      ],
+      "should_refuse": false,
+      "passed": true
+    },
+    {
+      "id": "Q8",
+      "question": "Can an applicant submit alternative evidence if they cannot provide a specified document?",
+      "expected_clauses": [
+        "§8.2.2"
+      ],
+      "retrieved_clauses": [
+        "§8.2.2",
+        "§8.6.1",
+        "§8.2.3",
+        "§8.2.1",
+        "§9.6.2",
+        "§9.6.1"
+      ],
+      "should_refuse": false,
+      "passed": true
+    },
+    {
+      "id": "Q9",
+      "question": "What is the weather in Calder County tomorrow?",
+      "expected_clauses": [],
+      "retrieved_clauses": [
+        "§1.1.2",
+        "§2.1.2",
+        "§1.4.10",
+        "§3.1.1",
+        "§1.1.1"
+      ],
+      "should_refuse": true,
+      "passed": true
+    },
+    {
+      "id": "Q10",
+      "question": "What are the tax rates applicable to household income?",
+      "expected_clauses": [],
+      "retrieved_clauses": [
+        "§6.1.1",
+        "§6.6.1",
+        "§7.1.1",
+        "§1.4.7",
+        "§2.4.1"
+      ],
+      "should_refuse": true,
+      "passed": true
+    }
+  ]
+}

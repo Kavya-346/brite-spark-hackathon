@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calder County HSP</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            background: #222;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .answer,
+        .evidence {
+            background: white;
+            margin-top: 25px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .clause {
+            border-left: 4px solid #333;
+            padding-left: 15px;
+            margin-top: 15px;
+        }
+
+        .clause-id {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Calder County Household Support Program</h1>
+
+    <div class="subtitle">
+        Grounded Policy Answer System
+    </div>
+
+    <form method="POST">
+
+        <textarea
+            name="question"
+            placeholder="Ask a question about the Household Support Program..."
+        >{{ question }}</textarea>
+
+        <br>
+
+        <button type="submit">
+            Ask Question
+        </button>
+
+    </form>
+
+    {% if answer %}
+
+    <div class="answer">
+
+        <h2>Answer</h2>
+
+        <p>{{ answer }}</p>
+
+    </div>
+
+    {% endif %}
+
+    {% if evidence %}
+
+    <div class="evidence">
+
+        <h2>Evidence</h2>
+
+        {% for clause in evidence %}
+
+        <div class="clause">
+
+            <div class="clause-id">
+                {{ clause.clause_id }}
+            </div>
+
+            <p>
+                {{ clause.text }}
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
