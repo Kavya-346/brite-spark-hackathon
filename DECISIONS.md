@@ -64,3 +64,38 @@ Additional date-sensitive tests verified:
 - Income thresholds use the appropriate historical or amended values
 - First sanction uses the appropriate historical or amended percentage
 - Section 10.5.3A is retrievable, grounded, cited, and displayed as evidence
+
+## Answer / Refusal Boundary
+
+The system uses a conservative grounding threshold because an unsupported
+policy answer is more harmful than a refusal in a benefits setting.
+
+The current grounding decision requires:
+
+- The best retrieved clause to have a semantic similarity score of at least 0.54.
+- At least 30% of the important words in the question to be present in the
+  retrieved evidence.
+- Additional checks for unsupported question terms.
+
+A question is refused when these grounding requirements are not satisfied.
+
+We deliberately did not lower the threshold simply to increase the number of
+questions answered. The goal is to prefer a justified refusal over a fluent
+answer that cannot be traced to the policy corpus.
+
+When a question is refused, the system provides a next step by directing the
+user to a caseworker at the Calder County Department of Household Services,
+supported by §1.1.2.
+
+### Why this boundary
+
+The threshold was chosen as a practical balance between recall and safety.
+A threshold that is too high would cause the system to refuse questions that
+the policy can answer, while a threshold that is too low would increase the
+risk of unsupported answers.
+
+The 10-question evaluation set, including unsupported questions, was used to
+check this behavior. The current evaluation result is 10/10 passed.
+
+The threshold remains an explicit design decision rather than an assumption
+that semantic similarity alone proves that an answer is supported.

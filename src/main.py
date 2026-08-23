@@ -19,9 +19,22 @@ def answer_question(question: str, date_context: DateContext):
     )
 
     if not has_sufficient_evidence(question, effective_clauses):
+        referral_clause = next(
+            (
+                clause
+                for clause in retriever.metadata
+                if clause["clause_id"] == "§1.1.2"
+            ),
+            None
+        )
+
         return {
-            "answer": "I cannot answer this from the policy manual.",
-            "evidence": []
+            "answer": (
+                "I cannot answer this from the policy manual. "
+                "Please ask a caseworker at the Calder County "
+                "Department of Household Services. (§1.1.2)"
+            ),
+            "evidence": [referral_clause] if referral_clause else []
         }
 
     policy_version = retriever.get_policy_version(
