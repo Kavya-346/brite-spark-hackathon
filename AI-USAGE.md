@@ -6,16 +6,8 @@ AI tools were used during the development of this project.
 
 AI assistance was used for:
 
-- Project scaffolding and code structure.
-- Debugging Python, Flask, FAISS, and import-path issues.
-- Retrieval and grounding logic.
-- Date-aware amendment handling.
-- Cross-reference and amendment-only clause handling.
-- Citation validation.
-- Test-case generation and debugging.
-- UI implementation and refinement.
-- README and DECISIONS.md drafting.
-- Reviewing errors and improving refusal behavior.
+- Debugging errors and resolving implementation issues.
+- Assisting with test cases and troubleshooting failed tests.
 
 ## Verification
 

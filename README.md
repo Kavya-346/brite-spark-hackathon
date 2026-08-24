@@ -46,9 +46,10 @@ Gemini answer generation
 Citation validation
      |
      v
-Answer + supporting evidence
+Answer + supporting evidence```
 
-Project Structure
+## Project Structure
+
 hackathon/
 |-- data/
 |   |-- policy-manual.md
@@ -81,14 +82,15 @@ hackathon/
 |-- requirements.txt
 `-- README.md
 
-Requirements
+## Requirements
+
 Python 3.10+
 A Gemini API key
 Internet access when the Gemini model is called
 
 No paid software or license is required.
 
-Setup
+## Setup
 
 Clone the repository:
 
@@ -106,7 +108,8 @@ Activate it on Windows PowerShell:
 Install dependencies:
 
 pip install -r requirements.txt
-Environment Configuration
+
+## Environment Configuration
 
 Create a .env file in the project root:
 
@@ -117,7 +120,7 @@ The .env file is intentionally excluded from Git.
 
 The evaluator should provide their own Gemini API key.
 
-Run the Application
+## Run the Application
 
 Run from the project root:
 
@@ -137,7 +140,8 @@ Supported date types:
 
 change_date
 determination_date
-Run the Evaluation
+
+## Run the Evaluation
 
 From the project root:
 
@@ -239,3 +243,7 @@ Grounding threshold
 Refusal logic
 Amendment-only clause handling
 AI Usage
+
+## AI Usage
+
+AI-assisted development is documented in `AI-USAGE.md`.
