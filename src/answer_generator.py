@@ -148,10 +148,6 @@ def generate_answer(
         for clause in effective_clauses
     )
 
-    amendment_information = json.dumps(
-        AMENDMENTS,
-        indent=2
-    )
 
     prompt = f"""
 {SYSTEM_PROMPT}
@@ -177,15 +173,24 @@ Treat those effective clause texts as authoritative for this question.
 If an effective clause contains "$175 per month", the answer must state "$175 per month".
 Do not omit a specific amount that directly answers the question.
 
-Amendment information:
-{amendment_information}
+The "Relevant policy clauses" above have already been transformed
+by the application according to the supplied relevant date and date type.
 
-Determine which provisions apply to the relevant date.
+Treat those effective clause texts as the ONLY authoritative policy text.
 
-The "Relevant policy clauses" below have already been transformed into
-their effective wording for the supplied date.
+Do not independently apply, reinterpret, or override amendment dates.
 
-Treat those effective clauses as the authoritative policy text.
+Do not use amendment metadata to change the effective clause text.
+
+If the effective clause says "10 calendar days", answer 10 calendar days.
+If the effective clause says "14 calendar days", answer 14 calendar days.
+
+The supplied date type is authoritative:
+- change_date means the date the change of circumstances occurred.
+- determination_date means the date the determination was made.
+
+Do not apply a change_date amendment to a determination_date question.
+Do not apply a determination_date amendment to a change_date question.
 
 If the question asks for a specific amount, percentage, threshold, or
 deadline, extract that exact value from the effective clause and state it.

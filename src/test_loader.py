@@ -21,3 +21,4 @@ for clause in amendment_clauses:
     print(clause["clause_id"])
     print(clause["text"])
     print()
+

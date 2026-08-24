@@ -34,7 +34,8 @@ def answer_question(question: str, date_context: DateContext):
                 "Please ask a caseworker at the Calder County "
                 "Department of Household Services. (§1.1.2)"
             ),
-            "evidence": [referral_clause] if referral_clause else []
+            "evidence": [],
+            "referral": referral_clause
         }
 
     policy_version = retriever.get_policy_version(

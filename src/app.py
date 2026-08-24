@@ -64,6 +64,7 @@ def index():
     relevant_date = ""
     date_type = "determination_date"
     policy_version = None
+    referral = None
     error = None
 
     if request.method == "POST":
@@ -113,6 +114,7 @@ def index():
 
                 answer = result["answer"]
                 evidence = result["evidence"]
+                referral = result.get("referral")
 
                 if parsed_date >= AMENDMENT_DATE:
                     policy_version = (
@@ -145,6 +147,7 @@ def index():
         relevant_date=relevant_date,
         date_type=date_type,
         policy_version=policy_version,
+        referral=referral,
         error=error
     )
 
